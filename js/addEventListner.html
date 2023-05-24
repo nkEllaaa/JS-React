@@ -1,0 +1,24 @@
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    <p>알림창</p>
+    <button id="close">닫기</button>
+  </div>
+  <button class="idBtn">버튼1</button>
+  <button class="pwBtn">버튼2</button>
+  <script>
+    document.querySelector('#close').addEventListener('click', function() {
+      document.querySelector('#alert').style.display = 'none';
+    })
+    // function btnOpen() {
+    //   document.querySelector('#alert').style.display = para;
+    // }
+  </script>
+</body>
+</html>

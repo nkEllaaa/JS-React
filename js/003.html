@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    <p>알림창</p>
+    <button onclick="알림창열기('none');">닫기</button>
+  </div>
+  <button class="idBtn" onclick="아이디알림창('아이디입력');">버튼1</button>
+  <button class="pwBtn" onclick="아이디알림창('비번입력');">버튼2</button>
+  <script>
+    function 아이디알림창 (para) {
+      document.querySelector('p').innerHTML = para;
+      document.querySelector('#alert').style.display = 'block';
+    }
+    function 알림창열기 (para) {
+      document.querySelector('#alert').style.display = para;
+    }
+
+  </script>
+</body>
+</html>

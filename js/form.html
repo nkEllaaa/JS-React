@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <style>
+  .black-bg {
+  width : 100%;
+  height : 100%;
+  position : fixed;
+  background : rgba(0,0,0,0.5);
+  z-index : 5;
+  padding: 30px;
+  display: none;
+}
+.show-modal {
+    display: block;
+  } 
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+} 
+  </style>
+</head>
+<body>
+  <div class="black-bg">
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <form action="./form_success.html">
+        <div class="my-3">
+          <input type="text" class="form-control">
+        </div>
+        <div class="my-3">
+            <input type="password" class="form-control pw">
+        </div>
+        <button type="submit" class="btn btn-primary">전송</button>
+        <button type="button" class="btn btn-danger" id="close">닫기</button>
+      </form> 
+    </div>
+  </div>
+  <button class="login" type="button">열기</button>
+  <script>
+    $('.login').on('click', function(){
+      $('.black-bg').addClass('show-modal')
+    })
+    $('#close').on('click', function() {
+      $('.black-bg').removeClass('show-modal')
+    })
+    $('form').on('submit', function(e){
+      if(document.querySelector('.form-control').value == ''){
+        alert('비었는데요?')
+        e.preventDefault();
+      } 
+      if(document.querySelector('.pw').value == ''){
+        alert('비었는데요?')
+        e.preventDefault();
+      } else if(document.querySelector('.pw').value.length < 6){
+        alert('더 길게');
+        e.preventDefault();
+      }
+    });
+      //document.quertySelector('#email').addEventListener('input', function(){
+      //
+      //})
+      //사용자가 인풋할때마다 감지, 'change' : 사용자가 입력하고 해당 인풋에서 포커스를 잃었을 때 감지 
+    // })
+    // function 삼육구 (num) {
+    //   if (num % 9 === 0) {
+    //     console.log('짝짝')
+    //   } else if (num % 3 === 0) {
+    //     console.log('짝')
+    //   } else {
+    //     console.log('통과')
+    //   }
+    // }
+    // 삼육구(9)
+    
+
+
+  </script>
+</body>
+</html>

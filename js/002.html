@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./002.css">
+</head>
+<body>
+  <!-- UI 만드는 스텝 -->
+  <!-- 1. HTML/CSS로 미리 디자인 -->
+  <!-- 2. 필요할 떄 보여달라고 js 짬 -->
+  <div class="alert-box">알림창
+    <button onclick="AlertBox('none')">닫기</button>
+  </div>
+  <button onclick="AlertBox('block')" type="button">열기</button>
+  <script>
+    function AlertBox (openClose) {
+      document.querySelector('.alert-box').style.display = openClose
+    }
+  </script>
+</body>
+</html>

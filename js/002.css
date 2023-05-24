@@ -1,0 +1,13 @@
+.alert-box {
+  background-color: slateblue;
+  padding: 20px;
+  color: white;
+  border-radius: 20px;
+  display: none;
+}
+.list-group {
+  display: none;
+}
+.show {
+  display: block;
+}
